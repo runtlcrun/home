@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="id" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>teenagelowcost — klub lari buat siapa aja</title>
+  <meta name="description" content="teenagelowcost: klub lari buat siapa aja. Gear murah, pace bebas, yang penting lari. / A running club for anyone.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="teenagelowcost">
+  <meta property="og:description" content="Klub lari buat siapa aja. Gear murah, yang penting lari.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+
+  <!-- Font (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + Bootstrap Icons (CDN, gratis, nggak perlu install apa-apa) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Gaya kustom (warna, font, layout) -->
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <a class="skip-link" href="#about" data-i18n="skip">Lewati ke konten</a>
+
+  <!-- ======================================================================
+       NAVBAR (menu atas)
+       Setiap link di bawah ini "lompat" ke section yang id-nya sama:
+         #home   -> section HOME    (slider + kolase foto)
+         #about  -> section ABOUT   (tentang klub)
+         #event  -> section EVENT   (daftar event yang pernah diikuti)
+         #kontak -> section KONTAK  (Instagram, Threads, WhatsApp, Email)
+       Mau tambah menu baru? Tambah <li> di sini + <section id="..."> di bawah.
+       Tombol ID / EN = ganti bahasa (teks ada di data.js).
+       ====================================================================== -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg pill-nav" id="mainNav">
+      <div class="container-fluid p-0">
+        <a class="navbar-brand" href="#home" aria-label="teenagelowcost — Home">
+          <img src="assets/logo.svg" alt="" width="38" height="38">
+          <span>teenagelowcost</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Buka menu" data-i18n-aria="nav.toggle">
+          <i class="bi bi-list fs-4"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="#home" data-i18n="nav.home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav.about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#event" data-i18n="nav.events">Event</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kontak" data-i18n="nav.contact">Kontak</a></li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <div class="lang-switch" role="group" aria-label="Bahasa" data-i18n-aria="nav.lang">
+                <button type="button" data-lang="id" aria-pressed="true">ID</button>
+                <button type="button" data-lang="en" aria-pressed="false">EN</button>
+              </div>
+            </li>
+            <!-- Jam digital (diatur di data.js -> SITE.clock) -->
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0" id="navClockItem">
+              <div class="nav-clock" id="navClock">
+                <span class="nav-clock-city" id="navClockCity">Tangerang</span>
+                <time class="nav-clock-time" id="navClockTime">--:--:--</time>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ====================================================================
+         MENU 1 — HOME
+         Bagian depan: SLIDER foto (kiri, gantian otomatis) + KOLASE 3 foto (kanan).
+         Foto-fotonya diatur di data.js -> SITE.heroSlides & SITE.collage
+         Teks (tagline, tombol, chip) diatur di data.js -> I18N (key hero.*, chip*)
+         ==================================================================== -->
+    <section id="home" class="hero" aria-label="Home">
+      <div class="hero-grid">
+
+        <div class="hero-main">
+          <!-- Slider (Bootstrap Carousel). Slide & indikator diisi otomatis oleh script.js -->
+          <div id="heroCarousel" class="carousel slide carousel-fade hero-carousel"
+               role="region" aria-roledescription="carousel" aria-label="Foto-foto klub" data-i18n-aria="hero.carousel">
+            <div class="carousel-inner" id="heroSlides"></div>
+            <div class="carousel-indicators" id="heroIndicators"></div>
+            <div class="hero-arrows" id="heroArrows">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Foto sebelumnya" data-i18n-aria="hero.prev"><i class="bi bi-chevron-left"></i></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Foto berikutnya" data-i18n-aria="hero.next"><i class="bi bi-chevron-right"></i></button>
+            </div>
+          </div>
+          <div class="hero-shade"></div>
+
+          <div class="hero-copy">
+            <h1 class="hero-title"><span>teenage</span><span>lowcost</span></h1>
+            <p class="hero-tagline" data-i18n="hero.tagline">Klub lari buat siapa aja. Gear seadanya, pace bebas — yang penting kamu lari.</p>
+            <div class="hero-actions">
+              <a class="btn btn-tlc" href="#kontak" data-i18n="hero.cta1">Ikut lari bareng</a>
+              <a class="btn btn-ghost" href="#event" data-i18n="hero.cta2">Lihat event</a>
+            </div>
+            <ul class="hero-chips">
+              <li class="hero-chip"><small data-i18n="chip1.l">untuk</small><strong data-i18n="chip1.v">siapa aja</strong></li>
+              <li class="hero-chip"><small data-i18n="chip2.l">pace</small><strong data-i18n="chip2.v">bebas</strong></li>
+              <li class="hero-chip"><small data-i18n="chip3.l">gear</small><strong data-i18n="chip3.v">seadanya</strong></li>
+            </ul>
+          </div>
+
+          <!-- Stiker "label harga" — teks di data.js (key tag.*) -->
+          <aside class="price-tag">
+            <span class="price-tag-top" data-i18n="tag.top">harga lari:</span>
+            <strong class="price-tag-big" data-i18n="tag.big">gratis*</strong>
+            <span class="price-tag-note" data-i18n="tag.note">*sepatu mahal nggak wajib</span>
+          </aside>
+        </div>
+
+        <!-- Kolase 3 foto (diisi otomatis dari SITE.collage) -->
+        <div class="hero-collage" id="heroCollage"></div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         MENU 2 — ABOUT
+         Cerita singkat klub + "starter kit".
+         Teks diatur di data.js -> I18N (key about.*, kit.*)
+         ==================================================================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="row gy-5 gx-lg-5 align-items-center">
+          <div class="col-lg-7">
+            <h2 class="section-title" data-i18n="about.title">Lari itu nggak harus mahal.</h2>
+            <p class="about-text" data-i18n="about.p1">teenagelowcost adalah klub lari buat siapa aja. Nggak peduli pace, nggak peduli merek sepatu — selama mau gerak, kamu boleh ikut.</p>
+            <p class="about-text" data-i18n="about.p2">Kami percaya gear mahal itu bonus, bukan syarat. Sepatu yang ada di rumah, kaos apa aja, botol minum dari dapur — itu udah cukup buat mulai.</p>
+          </div>
+          <div class="col-lg-5">
+            <div class="kit">
+              <h3 data-i18n="kit.title">starter kit</h3>
+              <ul>
+                <li><i class="bi bi-check-lg"></i><span data-i18n="kit.1">Sepatu yang ada di rumah</span></li>
+                <li><i class="bi bi-check-lg"></i><span data-i18n="kit.2">Kaos apa aja yang nyaman</span></li>
+                <li><i class="bi bi-check-lg"></i><span data-i18n="kit.3">Botol minum dari dapur</span></li>
+                <li><i class="bi bi-check-lg"></i><span data-i18n="kit.4">Niat buat datang</span></li>
+              </ul>
+              <p class="kit-note mb-0" data-i18n="kit.note">Sisanya menyusul pelan-pelan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         MENU 3 — EVENT
+         Daftar event lari yang pernah diikuti. Setiap kartu bisa diklik -> ke
+         halaman event. Kartu dibuat otomatis dari data.js -> SITE.events
+         (tambah / hapus event cukup di data.js, bukan di sini)
+         ==================================================================== -->
+    <section id="event" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="events.title">Event yang pernah kita ikutin.</h2>
+        <p class="section-lead mb-5" data-i18n="events.sub">Bukan lemari piala. Cuma daftar hadir — klik kartu buat buka halaman event-nya.</p>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3" id="eventGrid"></div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         MENU 4 — KONTAK
+         "Frame" Instagram & Threads + tombol WhatsApp / Email.
+         Link & handle diatur di data.js -> SITE.instagram, SITE.threads,
+         SITE.whatsapp, SITE.email
+         ==================================================================== -->
+    <section id="kontak" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="contact.title">Ikutan lari bareng.</h2>
+        <p class="section-lead mb-5" data-i18n="contact.sub">Cari kita di sosmed, atau kirim pesan langsung.</p>
+        <div class="row g-3" id="socialFrames"></div>
+        <div class="contact-row" id="contactRow"></div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ======================================================================
+       FOOTER (bagian bawah) — logo, tagline, link cepat
+       ====================================================================== -->
+  <footer class="container footer-wrap">
+    <div class="footer-panel">
+      <div class="footer-brand">
+        <img src="assets/logo.svg" alt="" width="56" height="56">
+        <p class="footer-name">teenagelowcost</p>
+        <p class="footer-tag" data-i18n="footer.tag">siapa aja boleh lari. gear murah, semangat jalan terus.</p>
+      </div>
+      <ul class="footer-links" id="footerLinks">
+        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#event" data-i18n="nav.events">Event</a></li>
+        <li><a href="#kontak" data-i18n="nav.contact">Kontak</a></li>
+      </ul>
+      <p class="footer-copy">© <span id="year">2026</span> teenagelowcost · <span data-i18n="footer.rights">hak cipta dilindungi</span></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (untuk slider & menu HP) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Konten (edit di sini) -->
+  <script src="data.js"></script>
+  <!-- Logika halaman (biasanya nggak perlu diedit) -->
+  <script src="script.js"></script>
+</body>
+</html>

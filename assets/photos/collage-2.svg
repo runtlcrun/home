@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101519"/><stop offset="1" stop-color="#080808"/></linearGradient>
+    <filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+  <rect width="900" height="900" fill="url(#g)"/>
+  <rect width="900" height="900" filter="url(#n)" opacity=".10"/>
+  <path d="M-45 738 C 225 495, 360 855, 540 558 S 810 315, 945 450" fill="none" stroke="#FFD60A" stroke-opacity=".28" stroke-width="4" stroke-dasharray="22 16" stroke-linecap="round"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#f3f0e8" text-anchor="middle">
+    <text x="450" y="270" font-size="63" font-weight="800" letter-spacing="2" fill-opacity=".55">FOTO KOLASE 2</text>
+    <text x="450" y="339" font-size="26" fill-opacity=".38">ganti dengan foto klub kamu (assets/photos)</text>
+  </g>
+</svg>
