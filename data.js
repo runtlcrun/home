@@ -88,7 +88,7 @@ threads: {
      "caption" = tulisan kecil di pojok foto (boleh dikosongkan "").
      ---------------------------------------------------------------------- */
   collage: [
-    { src: "assets/photos/collage-1.jpeg", alt: { id: "Foto kolase 1", en: "Collage photo 1" }, caption: { id: "satu jersey", en: "one jersey" } },
+    { src: "assets/photos/collage-1.jpg", alt: { id: "Foto kolase 1", en: "Collage photo 1" }, caption: { id: "satu jersey", en: "one jersey" } },
     { src: "assets/photos/collage-2.svg", alt: { id: "Foto kolase 2", en: "Collage photo 2" }, caption: { id: "lari santai", en: "easy run" } },
     { src: "assets/photos/collage-3.jpg", alt: { id: "Foto kolase 3", en: "Collage photo 3" }, caption: { id: "kumpul dulu", en: "meet-up first" } }
   ],
@@ -199,12 +199,12 @@ const I18N = {
     "hero.tagline": "A running club for anyone. Budget gear, any pace — just show up and run.",
     "hero.cta1": "Join a run",
     "hero.cta2": "See events",
-    "chip1.l": "for",    "chip1.v": "anyone",
-    "chip2.l": "pace",   "chip2.v": "your own",
-    "chip3.l": "gear",   "chip3.v": "budget",
-    "tag.top": "price of running:",
-    "tag.big": "free*",
-    "tag.note": "*fancy shoes not required",
+    // "chip1.l": "for",    "chip1.v": "anyone",
+    // "chip2.l": "pace",   "chip2.v": "your own",
+    // "chip3.l": "gear",   "chip3.v": "budget",
+    // "tag.top": "price of running:",
+    // "tag.big": "free*",
+    // "tag.note": "*fancy shoes not required",
 
     "about.title": "Running doesn't have to be expensive.",
     "about.p1": "TeenageLowCost is a friendly running community. It started in February 2025 in Tangerang, Indonesia. The founder is Muhammad Ridho Alfatih (@mrastufff).",
