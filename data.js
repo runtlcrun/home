@@ -78,7 +78,7 @@ threads: {
      ---------------------------------------------------------------------- */
   heroSlides: [
     { src: "assets/photos/slide-1.jpeg", alt: { id: "Anggota klub lari bareng di pagi hari", en: "Club members running together in the morning" } },
-    { src: "assets/photos/slide-2.svg", alt: { id: "Kumpul sebelum start lari", en: "Gathering before the run" } },
+    { src: "assets/photos/slide-2.jpeg", alt: { id: "Kumpul sebelum start lari", en: "Gathering before the run" } },
     { src: "assets/photos/slide-3.svg", alt: { id: "Foto bareng setelah finish", en: "Group photo after the finish" } }
   ],
 
