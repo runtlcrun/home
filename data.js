@@ -88,7 +88,7 @@ threads: {
      "caption" = tulisan kecil di pojok foto (boleh dikosongkan "").
      ---------------------------------------------------------------------- */
   collage: [
-    { src: "assets/photos/collage-1.jpg", alt: { id: "Foto kolase 1", en: "Collage photo 1" }, caption: { id: "satu jersey", en: "one jersey" } },
+    { src: "assets/photos/collage-1.jpeg", alt: { id: "Foto kolase 1", en: "Collage photo 1" }, caption: { id: "satu jersey", en: "one jersey" } },
     { src: "assets/photos/collage-2.svg", alt: { id: "Foto kolase 2", en: "Collage photo 2" }, caption: { id: "lari santai", en: "easy run" } },
     { src: "assets/photos/collage-3.jpg", alt: { id: "Foto kolase 3", en: "Collage photo 3" }, caption: { id: "kumpul dulu", en: "meet-up first" } }
   ],
