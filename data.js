@@ -90,7 +90,7 @@ threads: {
   collage: [
     { src: "assets/photos/collage-1.jpeg", alt: { id: "Foto kolase 1", en: "Collage photo 1" }, caption: { id: "satu jersey", en: "one jersey" } },
     { src: "assets/photos/collage-2.svg", alt: { id: "Foto kolase 2", en: "Collage photo 2" }, caption: { id: "lari santai", en: "easy run" } },
-    { src: "assets/photos/collage-3.jpg", alt: { id: "Foto kolase 3", en: "Collage photo 3" }, caption: { id: "25,26,27 September 2026📍Marchand Hype Station Bintaro", en: "5,26,27 September 2026📍Marchand Hype Station Bintaro" } }
+    { src: "assets/photos/collage-3.jpg", alt: { id: "Foto kolase 3", en: "Collage photo 3" }, caption: { id: "📍Marchand Hype Station Bintaro", en: "📍Marchand Hype Station Bintaro" } }
   ],
 
   /* ------------------------------------------------------------------------
