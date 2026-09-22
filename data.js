@@ -111,10 +111,10 @@ threads: {
      ⚠️ Semua di bawah ini CONTOH. Ganti dengan event asli kalian.
      ---------------------------------------------------------------------- */
   events: [
-    { name: "Garmin Run Marathon Series",       location: "BSD, Banten", url: "https://jakim.id/eng/", logo: "assets/events/garminrun-logo.webp", members: ["m_feriras"]},
+    { name: "Garmin Run Marathon Series 20 September 2026", location: "BSD, Banten", url: "https://jakim.id/eng/", logo: "assets/events/garminrun-logo.webp", members: ["m_feriras"]},
+    { name: "Pocari Sweat Bandung 2026",    location: "Bandung, Jawa Barat", url: "https://example.com", logo: "assets/events/pocarilombok.png", members: ["aryooo_s","nanashoerya", "acuniky_", "susiologi"] },
     { name: "Jakarta International Marathon",       location: "Jakarta, DKI Jakarta", url: "https://jakim.id/eng/", logo: "assets/events/jakim.png" },
     { name: "Maybank Marathon",       location: "Gianyar, Bali", url: "https://example.com", logo: "assets/events/maybank.png" },
-    { name: "Pocari Sweat Lombok",    location: "Lombok, NTB", url: "https://example.com", logo: "assets/events/pocarilombok.png" },
     { name: "Jakarta Running Festival",        location: "Jakarta, DKI Jakarta", url: "https://example.com", logo: "assets/events/jrf2025.jpeg" },
     { name: "Coast To Coast",        location: "Kota, Provinsi", url: "https://example.com", logo: "assets/events/ctc.webp" },
     { name: "Contoh City Marathon",    location: "Kota, Provinsi", url: "https://example.com", logo: "assets/events/jrf2025.jpeg" },
