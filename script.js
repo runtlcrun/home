@@ -93,6 +93,16 @@
         ? `<img src="${esc(ev.logo)}" alt="${esc(ev.name)}" loading="lazy" decoding="async" data-fallback="${esc(ev.name)}">`
         : `<span class="event-initials">${esc(ev.name)}</span>`;
       const tags = [ev.distance, ev.date].filter(Boolean).map((x) => `<span>${esc(x)}</span>`).join("");
+      
+        // ← TAMBAH INI
+      const memberHtml = (ev.members && ev.members.length)
+        ? `<div class="event-members">
+        ${ev.members.map(ig =>
+          `<a href="https://instagram.com/${esc(ig)}" target="_blank" rel="noopener" class="event-member-handle">@${esc(ig)}</a>`
+        ).join("")}
+          </div>`
+        : "";
+
       const inner =
         `<div class="event-logo">${logo}</div>` +
         `<div class="event-body">` +
