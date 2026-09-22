@@ -111,15 +111,15 @@ threads: {
      ⚠️ Semua di bawah ini CONTOH. Ganti dengan event asli kalian.
      ---------------------------------------------------------------------- */
   events: [
-    { name: "Garmin Run Marathon Series",       location: "BSD, Banten", distance: "21K",  date: "2026", url: "https://jakim.id/eng/", logo: "assets/events/garminrun-logo.webp", members: ["m_feriras"]},
-    { name: "Jakarta International Marathon",       location: "Jakarta, DKI Jakarta", distance: "10K, 21K, 42K",  date: "2026", url: "https://jakim.id/eng/", logo: "assets/events/jakim.png" },
-    { name: "Maybank Marathon",       location: "Gianyar, Bali", distance: "21K", date: "2026", url: "https://example.com", logo: "assets/events/maybank.png" },
-    { name: "Pocari Sweat Lombok",    location: "Lombok, NTB", distance: "21K", date: "2026", url: "https://example.com", logo: "assets/events/pocarilombok.png" },
-    { name: "Jakarta Running Festival",        location: "Jakarta, DKI Jakarta", distance: "21K", date: "2025", url: "https://example.com", logo: "assets/events/jrf2025.jpeg" },
-    { name: "Coast To Coast",        location: "Kota, Provinsi", distance: "5K",  date: "2026", url: "https://example.com", logo: "assets/events/ctc.webp" },
-    { name: "Contoh City Marathon",    location: "Kota, Provinsi", distance: "42K", date: "2026", url: "https://example.com", logo: "assets/events/jrf2025.jpeg" },
-    { name: "Contoh Trail Run",        location: "Kota, Provinsi", distance: "15K", date: "2026", url: "https://example.com", logo: "" },
-    { name: "Contoh Charity Run",      location: "Kota, Provinsi", distance: "5K",  date: "2026", url: "https://example.com", logo: "" }
+    { name: "Garmin Run Marathon Series",       location: "BSD, Banten", url: "https://jakim.id/eng/", logo: "assets/events/garminrun-logo.webp", members: ["m_feriras"]},
+    { name: "Jakarta International Marathon",       location: "Jakarta, DKI Jakarta", url: "https://jakim.id/eng/", logo: "assets/events/jakim.png" },
+    { name: "Maybank Marathon",       location: "Gianyar, Bali", url: "https://example.com", logo: "assets/events/maybank.png" },
+    { name: "Pocari Sweat Lombok",    location: "Lombok, NTB", url: "https://example.com", logo: "assets/events/pocarilombok.png" },
+    { name: "Jakarta Running Festival",        location: "Jakarta, DKI Jakarta", url: "https://example.com", logo: "assets/events/jrf2025.jpeg" },
+    { name: "Coast To Coast",        location: "Kota, Provinsi", url: "https://example.com", logo: "assets/events/ctc.webp" },
+    { name: "Contoh City Marathon",    location: "Kota, Provinsi", url: "https://example.com", logo: "assets/events/jrf2025.jpeg" },
+    { name: "Contoh Trail Run",        location: "Kota, Provinsi", url: "https://example.com", logo: "" },
+    { name: "Contoh Charity Run",      location: "Kota, Provinsi", url: "https://example.com", logo: "" }
   ]
 };
 
