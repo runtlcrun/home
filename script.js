@@ -311,8 +311,12 @@
         ? `<img src="${esc(m.photo)}" alt="${esc(m.name)}" loading="lazy">`
         : `<div class="mbubble-placeholder"><i class="bi bi-person-fill"></i></div>`;
 
-      el.innerHTML = inner +
-        `<div class="mbubble-tip">${esc(m.name)}<span>@${esc(m.ig)}</span></div>`;
+      el.innerHTML = inner;
+
+      const tip = document.createElement("div");
+      tip.className = "mbubble-tip";
+      tip.innerHTML = `${esc(m.name)}<span>@${esc(m.ig)}</span>`;
+      el.appendChild(tip);
 
       el.addEventListener("click", () => {
         window.open("https://instagram.com/" + encodeURIComponent(m.ig), "_blank", "noopener");
