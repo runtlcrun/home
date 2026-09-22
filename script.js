@@ -93,8 +93,6 @@
         ? `<img src="${esc(ev.logo)}" alt="${esc(ev.name)}" loading="lazy" decoding="async" data-fallback="${esc(ev.name)}">`
         : `<span class="event-initials">${esc(ev.name)}</span>`;
       const tags = [ev.distance, ev.date].filter(Boolean).map((x) => `<span>${esc(x)}</span>`).join("");
-      
-        // ← TAMBAH INI
       const memberHtml = (ev.members && ev.members.length)
         ? `<div class="event-members">
         ${ev.members.map(ig =>
@@ -112,12 +110,16 @@
         `</div>`;
 
       if (ev.url) {
-        return `<div class="col"><a class="event-card" href="${esc(ev.url)}" target="_blank" rel="noopener noreferrer">` +
-          inner +
-          `<span class="event-go" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>` +
-          `<span class="visually-hidden">${esc(t("events.newtab"))}</span></a></div>`;
+        return `<div class="col">` +
+          `<a class="event-card" href="${esc(ev.url)}" target="_blank" rel="noopener noreferrer">` +
+            inner +
+            `<span class="event-go" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>` +
+            `<span class="visually-hidden">${esc(t("events.newtab"))}</span>` +
+          `</a>` +
+          memberHtml +
+        `</div>`;
       }
-      return `<div class="col"><div class="event-card">${inner}</div></div>`;
+      return `<div class="col"><div class="event-card">${inner}</div>${memberHtml}</div>`;
     }).join("");
   }
 
