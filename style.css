@@ -299,7 +299,7 @@ section[id] { scroll-margin-top: .5rem; }
   position: relative;
   width: 100%; height: 380px;
   border: 1px solid var(--tlc-line); border-radius: 26px;
-  background: var(--tlc-surface); overflow: hidden;
+  background: var(--tlc-surface); overflow: visible;
 }
 .member-bubble-label {
   position: absolute; top: 1.1rem; left: 50%; transform: translateX(-50%);
