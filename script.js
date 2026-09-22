@@ -360,6 +360,7 @@
   /* ---------- Mulai ---------- */
   $("#year").textContent = new Date().getFullYear();
   buildHero();
+  renderMemberBubbles();
   renderFooterSocials();
   renderSocials();
   applyLang();

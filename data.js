@@ -116,11 +116,11 @@ threads: {
      Taruh foto di assets/members/ ukuran 400x400px WebP/JPG
      ---------------------------------------------------------------------- */
   members: [
-    { name: "Muhammad Ridho", ig: "mrastufff",   photo: "assets/members/ridho.jpeg" },
+    { name: "Ridho", ig: "mrastufff",   photo: "assets/members/ridho.jpeg" },
     { name: "Feriras",        ig: "m_feriras",   photo: "" },
     { name: "Aryo",           ig: "aryooo_s",    photo: "" },
     { name: "Nana",           ig: "nanashoerya", photo: "" },
-    { name: "Acun",           ig: "acuniky_",    photo: "" },
+    { name: "Niki",           ig: "acuniky_",    photo: "" },
     { name: "Susiologi",      ig: "susiologi",   photo: "" }
   ],
 
