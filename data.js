@@ -111,7 +111,7 @@ threads: {
      ⚠️ Semua di bawah ini CONTOH. Ganti dengan event asli kalian.
      ---------------------------------------------------------------------- */
   events: [
-    { name: "Garmin Run Marathon Series",       location: "BSD, Banten", distance: "21K",  date: "2026", url: "https://jakim.id/eng/", logo: "assets/events/garminrun-logo.webp" },
+    { name: "Garmin Run Marathon Series",       location: "BSD, Banten", distance: "21K",  date: "2026", url: "https://jakim.id/eng/", logo: "assets/events/garminrun-logo.webp", members: ["m_feriras"]},
     { name: "Jakarta International Marathon",       location: "Jakarta, DKI Jakarta", distance: "10K, 21K, 42K",  date: "2026", url: "https://jakim.id/eng/", logo: "assets/events/jakim.png" },
     { name: "Maybank Marathon",       location: "Gianyar, Bali", distance: "21K", date: "2026", url: "https://example.com", logo: "assets/events/maybank.png" },
     { name: "Pocari Sweat Lombok",    location: "Lombok, NTB", distance: "21K", date: "2026", url: "https://example.com", logo: "assets/events/pocarilombok.png" },
