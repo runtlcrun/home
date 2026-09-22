@@ -290,6 +290,73 @@
     setInterval(tick, 1000);
   }
 
+
+  /* ---------- ABOUT: Member Floating Bubbles ---------- */
+  function renderMemberBubbles() {
+    const stage = $("#memberBubbleStage");
+    if (!stage) return;
+    const members = SITE.members || [];
+    if (!members.length) return;
+
+    const MIN = 48, MAX = 90;
+    const bubbles = members.map((m) => {
+      const size = MIN + Math.floor(Math.random() * (MAX - MIN + 1));
+      const el = document.createElement("div");
+      el.className = "mbubble";
+      el.style.width = el.style.height = size + "px";
+      el.style.fontSize = (size * 0.4) + "px";
+      el.style.zIndex = Math.floor(Math.random() * 5) + 1;
+
+      const inner = m.photo
+        ? `<img src="${esc(m.photo)}" alt="${esc(m.name)}" loading="lazy">`
+        : `<div class="mbubble-placeholder"><i class="bi bi-person-fill"></i></div>`;
+
+      el.innerHTML = inner +
+        `<div class="mbubble-tip">${esc(m.name)}<span>@${esc(m.ig)}</span></div>`;
+
+      el.addEventListener("click", () => {
+        window.open("https://instagram.com/" + encodeURIComponent(m.ig), "_blank", "noopener");
+      });
+
+      stage.appendChild(el);
+
+      const w = stage.clientWidth || 380;
+      const h = stage.clientHeight || 380;
+      return {
+        el, size,
+        x: size / 2 + Math.random() * (w - size),
+        y: size / 2 + Math.random() * (h - size),
+        vx: (Math.random() - 0.5) * 0.7,
+        vy: (Math.random() - 0.5) * 0.7,
+      };
+    });
+
+    function tick() {
+      const w = stage.clientWidth;
+      const h = stage.clientHeight;
+      bubbles.forEach((b) => {
+        b.x += b.vx;
+        b.y += b.vy;
+        const r = b.size / 2;
+        if (b.x - r < 0)   { b.x = r;   b.vx = Math.abs(b.vx); }
+        if (b.x + r > w)   { b.x = w-r; b.vx = -Math.abs(b.vx); }
+        if (b.y - r < 0)   { b.y = r;   b.vy = Math.abs(b.vy); }
+        if (b.y + r > h)   { b.y = h-r; b.vy = -Math.abs(b.vy); }
+        b.el.style.left = (b.x - b.size / 2) + "px";
+        b.el.style.top  = (b.y - b.size / 2) + "px";
+      });
+      requestAnimationFrame(tick);
+    }
+    if (!reducedMotion) tick();
+    else {
+      // Posisi static kalau prefer-reduced-motion
+      bubbles.forEach((b) => {
+        b.el.style.left = (b.x - b.size / 2) + "px";
+        b.el.style.top  = (b.y - b.size / 2) + "px";
+      });
+    }
+  }
+
   /* ---------- Mulai ---------- */
   $("#year").textContent = new Date().getFullYear();
   buildHero();

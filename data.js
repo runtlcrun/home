@@ -110,10 +110,24 @@ threads: {
      Cara tambah event baru: copy 1 blok { ... }, tempel di bawahnya, ganti isinya.
      ⚠️ Semua di bawah ini CONTOH. Ganti dengan event asli kalian.
      ---------------------------------------------------------------------- */
+  /* ------------------------------------------------------------------------
+     ANGGOTA / MEMBERS — bubble mengambang di section ABOUT
+     Tambah member: copy 1 baris, ganti name, ig, photo (kosongkan photo:"" pakai placeholder)
+     Taruh foto di assets/members/ ukuran 400x400px WebP/JPG
+     ---------------------------------------------------------------------- */
+  members: [
+    { name: "Muhammad Ridho", ig: "mrastufff",   photo: "" },
+    { name: "Feriras",        ig: "m_feriras",   photo: "" },
+    { name: "Aryo",           ig: "aryooo_s",    photo: "" },
+    { name: "Nana",           ig: "nanashoerya", photo: "" },
+    { name: "Acun",           ig: "acuniky_",    photo: "" },
+    { name: "Susiologi",      ig: "susiologi",   photo: "" }
+  ],
+
   events: [
     { name: "Garmin Run Marathon Series 20 September 2026", location: "BSD, Banten", url: "https://jakim.id/eng/", logo: "assets/events/garminrun-logo.webp", members: ["m_feriras"]},
     { name: "Pocari Sweat Bandung 2026",    location: "Bandung, Jawa Barat", url: "https://example.com", logo: "assets/events/pocarilombok.png", members: ["aryooo_s", "nanashoerya", "acuniky_", "susiologi"]},
-    { name: "Tangerang 10K 2026",       location: "Tangerang Kota, Banten", url: "https://jakim.id/eng/", logo: "assets/events/tng102026.png" },
+    { name: "Jakarta International Marathon",       location: "Jakarta, DKI Jakarta", url: "https://jakim.id/eng/", logo: "assets/events/jakim.png" },
     { name: "Maybank Marathon",       location: "Gianyar, Bali", url: "https://example.com", logo: "assets/events/maybank.png" },
     { name: "Jakarta Running Festival",        location: "Jakarta, DKI Jakarta", url: "https://example.com", logo: "assets/events/jrf2025.jpeg" },
     { name: "Coast To Coast",        location: "Kota, Provinsi", url: "https://example.com", logo: "assets/events/ctc.webp" },
@@ -154,6 +168,7 @@ const I18N = {
     "tag.note": "*sepatu mahal nggak wajib",
 
     /* MENU ABOUT */
+    "members.label": "anggota kita",
     "about.title": "Lari itu nggak harus mahal.",
     "about.p1": "TeenageLowCost adalah sebuah komunitas lari yang ramah. Komunitas ini dimulai pada bulan Februari 2025 di Tangerang, Indonesia. Pendirinya adalah Muhammad Ridho Alfatih (@mrastufff). ",
     "about.p2": "Komunitas ini percaya bahwa olahraga lari adalah untuk siapa saja, bahkan jika Anda tidak memiliki perlengkapan yang mahal. Siapa pun boleh bergabung—baik pelari pemula maupun yang sudah berpengalaman. TeenageLowCost biasanya berlari di sekitar Tangerang. Beberapa rute favoritnya adalah Alam Sutera Loop, Mozia Loop, Karawaci Loop, dan Benteng Reborn Loop. Para anggota berlatih bersama, berkembang selangkah demi selangkah, dan menjalin pertemanan baru. Mereka juga melakukan latihan trail running (lari lintas alam) di Sentul, Bogor, untuk menjadi lebih kuat dan membangun daya tahan di medan yang berbeda. Hal yang membuat TeenageLowCost spesial adalah semangatnya yang sederhana dan inklusif. Namanya bermakna bahwa Anda tidak membutuhkan anggaran besar untuk berlari—cukup niat dan motivasi untuk memulai. Di komunitas ini, setiap pelari itu berharga, dan setiap kemajuan sekecil apa pun selalu dirayakan.",
@@ -206,6 +221,7 @@ const I18N = {
     // "tag.big": "free*",
     // "tag.note": "*fancy shoes not required",
 
+    "members.label": "our members",
     "about.title": "Running doesn't have to be expensive.",
     "about.p1": "TeenageLowCost is a friendly running community. It started in February 2025 in Tangerang, Indonesia. The founder is Muhammad Ridho Alfatih (@mrastufff).",
     "about.p2": "This community believes that running is for everyone, even if you don’t have expensive gear. Anyone can join—beginners or experienced runners. TeenageLowCost usually runs around Tangerang. Some favorite routes are Alam Sutera Loop, Mozia Loop, Karawaci Loop, and Benteng Reborn Loop. Members train together, improve step by step, and make new friends. They also do trail running training in Sentul, Bogor, to get stronger and build endurance on different terrain. What makes TeenageLowCost special is the simple and inclusive spirit. The name means you don’t need a big budget to run—just the motivation to start. In this community, every runner matters, and every progress is celebrated.",

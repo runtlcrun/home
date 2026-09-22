@@ -294,6 +294,43 @@ section[id] { scroll-margin-top: .5rem; }
 .kit li i { margin-top: .1rem; color: var(--tlc-accent); }
 .kit-note { padding-top: 1rem; border-top: 1px dashed var(--tlc-line); color: var(--tlc-muted); font-size: .95rem; }
 
+/* MEMBER BUBBLE */
+.member-bubble-box {
+  position: relative;
+  width: 100%; height: 380px;
+  border: 1px solid var(--tlc-line); border-radius: 26px;
+  background: var(--tlc-surface); overflow: hidden;
+}
+.member-bubble-label {
+  position: absolute; top: 1.1rem; left: 50%; transform: translateX(-50%);
+  font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--tlc-muted); white-space: nowrap; pointer-events: none; z-index: 2;
+}
+.member-bubble-stage { position: absolute; inset: 0; }
+.mbubble {
+  position: absolute; border-radius: 50%; overflow: hidden;
+  border: 1.5px solid var(--tlc-line);
+  background: var(--tlc-surface-2);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; will-change: transform;
+  transition: border-color .2s;
+}
+.mbubble:hover { border-color: var(--tlc-accent); z-index: 10 !important; }
+.mbubble img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mbubble-placeholder {
+  width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+  color: var(--tlc-muted); font-size: inherit;
+}
+.mbubble-tip {
+  position: absolute; bottom: calc(100% + 7px); left: 50%; transform: translateX(-50%);
+  background: var(--tlc-surface-2); border: .5px solid var(--tlc-line);
+  border-radius: 8px; padding: 4px 10px; white-space: nowrap;
+  pointer-events: none; opacity: 0; transition: opacity .15s; z-index: 20;
+  font-size: 12px; font-weight: 500; color: var(--tlc-text);
+}
+.mbubble-tip span { display: block; font-size: 11px; color: var(--tlc-accent); font-weight: 400; }
+.mbubble:hover .mbubble-tip { opacity: 1; }
+
 /* EVENT */
 .event-card {
   position: relative; display: flex; flex-direction: column; height: 100%;
