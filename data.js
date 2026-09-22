@@ -112,7 +112,7 @@ threads: {
      ---------------------------------------------------------------------- */
   events: [
     { name: "Garmin Run Marathon Series 20 September 2026", location: "BSD, Banten", url: "https://jakim.id/eng/", logo: "assets/events/garminrun-logo.webp", members: ["m_feriras"]},
-    { name: "Pocari Sweat Bandung 2026",    location: "Bandung, Jawa Barat", url: "https://example.com", logo: "assets/events/pocarilombok.png", members: ["aryooo_s","nanashoerya", "acuniky_", "susiologi"] },
+    { name: "Pocari Sweat Bandung 2026",    location: "Bandung, Jawa Barat", url: "https://example.com", logo: "assets/events/pocarilombok.png", members: ["aryooo_s", "nanashoerya", "acuniky_", "susiologi"] },
     { name: "Jakarta International Marathon",       location: "Jakarta, DKI Jakarta", url: "https://jakim.id/eng/", logo: "assets/events/jakim.png" },
     { name: "Maybank Marathon",       location: "Gianyar, Bali", url: "https://example.com", logo: "assets/events/maybank.png" },
     { name: "Jakarta Running Festival",        location: "Jakarta, DKI Jakarta", url: "https://example.com", logo: "assets/events/jrf2025.jpeg" },
