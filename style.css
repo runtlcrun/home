@@ -330,6 +330,19 @@ section[id] { scroll-margin-top: .5rem; }
 .event-card:focus-visible .event-go { opacity: 1; transform: none; }
 @media (hover: none) { .event-go { opacity: 1; transform: none; } }
 
+.event-members {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin-top: 10px; padding-top: 10px;
+  border-top: 1px dashed var(--tlc-line);
+}
+.event-member-handle {
+  font-size: 11px; color: var(--tlc-accent);
+  text-decoration: none; background: var(--tlc-surface-2);
+  border: .5px solid var(--tlc-line); border-radius: 20px;
+  padding: 3px 9px; transition: border-color .15s;
+}
+.event-member-handle:hover { border-color: var(--tlc-accent); }
+
 /* KONTAK */
 .social-frame {
   display: flex; flex-direction: column; height: 100%;
