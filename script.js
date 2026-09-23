@@ -224,6 +224,7 @@
     updateHeroAlts();
     renderCollage();
     renderEvents();
+    renderLeaderboard();
   }
 
   $$(".lang-switch button").forEach((btn) => {
