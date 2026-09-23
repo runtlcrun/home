@@ -360,14 +360,14 @@ section[id] { scroll-margin-top: .5rem; }
 }
 .lb-table-wrap { overflow-x: auto; border-radius: 16px; border: 1px solid var(--tlc-line); }
 .lb-table {
-  width: 100%; border-collapse: collapse; font-size: 13px;
+  width: 100%; border-collapse: collapse; font-size: 15px;
 }
 .lb-table thead tr {
   background: #111; border-bottom: 1px solid var(--tlc-line);
 }
 .lb-table th {
   padding: .75rem 1rem; text-align: left;
-  font-size: 11px; font-weight: 600; letter-spacing: .05em;
+  font-size: 13px; font-weight: 600; letter-spacing: .05em;
   color: var(--tlc-muted); white-space: nowrap;
 }
 .lb-table tbody tr {
