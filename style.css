@@ -186,12 +186,23 @@ section[id] { scroll-margin-top: .5rem; }
 .hero-copy { position: relative; z-index: 3; max-width: 44rem; pointer-events: none; }
 .hero-copy .btn, .hero-copy a { pointer-events: auto; }
 
-.hero-title {
+/* .hero-title {
   margin: 0 0 1.5rem;
   font-family: var(--font-display); font-weight: 800;
   font-size: clamp(4.2rem, 10.2vw, 9rem);
   line-height: .86; letter-spacing: -.045em;
+} */
+
+.hero-title {
+  margin: 0 0 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.8rem, 8vw, 7rem);
+  line-height: .9;
+  letter-spacing: -.06em;
+  white-space: nowrap;
 }
+
 .hero-title span { display: block; }
 
 .hero-tagline {
