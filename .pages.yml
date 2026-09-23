@@ -1,6 +1,0 @@
-content:
-  - name: website_data
-    label: Konten Website
-    type: file
-    path: data.js
-    format: code
