@@ -55,6 +55,7 @@
             <li class="nav-item"><a class="nav-link" href="#home" data-i18n="nav.home">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav.about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#event" data-i18n="nav.events">Event</a></li>
+            <li class="nav-item"><a class="nav-link" href="#leaderboard" data-i18n="nav.leaderboard">Leaderboard</a></li>
             <li class="nav-item"><a class="nav-link" href="#kontak" data-i18n="nav.contact">Kontak</a></li>
             <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
               <div class="lang-switch" role="group" aria-label="Bahasa" data-i18n-aria="nav.lang">
@@ -163,6 +164,45 @@
         <h2 class="section-title" data-i18n="events.title">Event yang pernah kita ikutin.</h2>
         <p class="section-lead mb-5" data-i18n="events.sub">Bukan lemari piala. Cuma daftar hadir — klik kartu buat buka halaman event-nya.</p>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3" id="eventGrid"></div>
+      </div>
+    </section>
+
+
+
+    <!-- ====================================================================
+         MENU 3B — LEADERBOARD
+         Data diatur di data.js -> SITE.leaderboard
+         Update manual tiap minggu dari Strava Club
+         ==================================================================== -->
+    <section id="leaderboard" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="lb.title">Siapa yang paling rajin minggu ini.</h2>
+        <p class="section-lead" data-i18n="lb.sub">Data dari Strava Club · diupdate manual tiap minggu.</p>
+        <div class="lb-controls">
+          <span class="lb-updated" id="lbUpdated"></span>
+          <div class="lb-sort-wrap">
+            <span data-i18n="lb.sortby">Urutkan:</span>
+            <button class="lb-sort active" data-sort="km" data-i18n="lb.km">Distance</button>
+            <button class="lb-sort" data-sort="runs" data-i18n="lb.runs">Runs</button>
+            <button class="lb-sort" data-sort="pace" data-i18n="lb.pace">Pace</button>
+          </div>
+        </div>
+        <div class="lb-table-wrap">
+          <table class="lb-table" id="lbTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th data-i18n="lb.athlete">Athlete</th>
+                <th data-i18n="lb.km">Distance</th>
+                <th data-i18n="lb.runs">Runs</th>
+                <th data-i18n="lb.longest">Longest</th>
+                <th data-i18n="lb.pace">Avg. Pace</th>
+                <th data-i18n="lb.elev">Elev. Gain</th>
+              </tr>
+            </thead>
+            <tbody id="lbBody"></tbody>
+          </table>
+        </div>
       </div>
     </section>
 

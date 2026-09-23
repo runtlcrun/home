@@ -115,6 +115,43 @@ threads: {
      Tambah member: copy 1 baris, ganti name, ig, photo (kosongkan photo:"" pakai placeholder)
      Taruh foto di assets/members/ ukuran 400x400px WebP/JPG
      ---------------------------------------------------------------------- */
+  /* ------------------------------------------------------------------------
+     LEADERBOARD — update manual tiap minggu dari Strava Club
+     updatedAt : tanggal update terakhir (string bebas)
+     data      : array member, urutan bebas (JS yang sort)
+       name    : nama athlete
+       km      : total distance dalam km (angka)
+       runs    : jumlah aktivitas (angka)
+       longest : lari terpanjang dalam km (angka)
+       pace    : avg pace dalam format "M:SS" (string)
+       elev    : elevasi gain dalam meter (angka, 0 kalau "--")
+     ---------------------------------------------------------------------- */
+  leaderboard: {
+    updatedAt: "Sep 2026 · Week 3",
+    data: [
+      { name: "Aryo Seto",          km: 27.1, runs: 5, longest: 12.0, pace: "5:50", elev: 58  },
+      { name: "Raden Mas Goblin",   km: 21.1, runs: 3, longest: 10.4, pace: "5:27", elev: 15  },
+      { name: "Ismet Djailani",     km: 20.2, runs: 2, longest: 15.0, pace: "7:49", elev: 31  },
+      { name: "Achmad Hafidz",      km: 20.0, runs: 1, longest: 20.0, pace: "5:09", elev: 11  },
+      { name: "Kevin Octo Pratama", km: 16.1, runs: 2, longest: 9.1,  pace: "6:29", elev: 124 },
+      { name: "Azhar Wijaya",       km: 14.2, runs: 2, longest: 8.2,  pace: "6:42", elev: 15  },
+      { name: "Sultan Ucok",        km: 13.1, runs: 2, longest: 6.5,  pace: "6:52", elev: 0   },
+      { name: "Dini Safitri",       km: 13.0, runs: 3, longest: 8.0,  pace: "7:19", elev: 11  },
+      { name: "Tiahayu Aulia",      km: 11.5, runs: 2, longest: 8.5,  pace: "7:17", elev: 0   },
+      { name: "Arief Suryana Putra",km: 10.5, runs: 3, longest: 5.1,  pace: "6:31", elev: 58  },
+      { name: "Ajid Asad",          km: 10.5, runs: 2, longest: 5.5,  pace: "9:31", elev: 23  },
+      { name: "Herdianto Rosa",     km: 10.4, runs: 2, longest: 5.2,  pace: "7:37", elev: 14  },
+      { name: "Nicko Ferdinand",    km: 10.1, runs: 1, longest: 10.1, pace: "6:24", elev: 12  },
+      { name: "Naufal Aqshal",      km: 10.0, runs: 2, longest: 5.0,  pace: "8:26", elev: 7   },
+      { name: "Agung Tranata",      km: 9.3,  runs: 2, longest: 5.0,  pace: "7:19", elev: 6   },
+      { name: "Silvia A.",          km: 7.0,  runs: 1, longest: 7.0,  pace: "8:30", elev: 0   },
+      { name: "Ikmal Maulana",      km: 7.0,  runs: 2, longest: 5.0,  pace: "6:47", elev: 60  },
+      { name: "Awand Hadiningrat",  km: 6.8,  runs: 2, longest: 5.1,  pace: "6:55", elev: 4   },
+      { name: "Seto Makmur",        km: 6.3,  runs: 2, longest: 5.0,  pace: "7:20", elev: 19  },
+      { name: "Dicky Cipta Pradana",km: 6.0,  runs: 1, longest: 6.0,  pace: "6:52", elev: 12  },
+    ]
+  },
+
   members: [
     { name: "Ridho", ig: "mrastufff",   photo: "assets/members/ridho.jpeg" },
     { name: "Feriras",        ig: "m_feriras",   photo: "" },
@@ -168,6 +205,17 @@ const I18N = {
     "tag.note": "*sepatu mahal nggak wajib",
 
     /* MENU ABOUT */
+    "nav.leaderboard": "Leaderboard",
+    "lb.title": "Siapa yang paling rajin minggu ini.",
+    "lb.sub": "Data dari Strava Club · diupdate manual tiap minggu.",
+    "lb.sortby": "Urutkan:",
+    "lb.athlete": "Athlete",
+    "lb.km": "Distance",
+    "lb.runs": "Runs",
+    "lb.longest": "Longest",
+    "lb.pace": "Avg. Pace",
+    "lb.elev": "Elev. Gain",
+    "lb.updated": "Update:",
     "members.label": "anggota kita",
     "about.title": "Lari itu nggak harus mahal.",
     "about.p1": "TeenageLowCost adalah sebuah komunitas lari yang ramah. Komunitas ini dimulai pada bulan Februari 2025 di Tangerang, Indonesia. Pendirinya adalah Muhammad Ridho Alfatih (@mrastufff). ",
@@ -221,6 +269,17 @@ const I18N = {
     // "tag.big": "free*",
     // "tag.note": "*fancy shoes not required",
 
+    "nav.leaderboard": "Leaderboard",
+    "lb.title": "This week's top runners.",
+    "lb.sub": "Data from Strava Club · updated manually every week.",
+    "lb.sortby": "Sort by:",
+    "lb.athlete": "Athlete",
+    "lb.km": "Distance",
+    "lb.runs": "Runs",
+    "lb.longest": "Longest",
+    "lb.pace": "Avg. Pace",
+    "lb.elev": "Elev. Gain",
+    "lb.updated": "Updated:",
     "members.label": "our members",
     "about.title": "Running doesn't have to be expensive.",
     "about.p1": "TeenageLowCost is a friendly running community. It started in February 2025 in Tangerang, Indonesia. The founder is Muhammad Ridho Alfatih (@mrastufff).",

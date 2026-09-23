@@ -291,6 +291,48 @@
   }
 
 
+  /* ---------- LEADERBOARD ---------- */
+  function renderLeaderboard(sortKey) {
+    const lb = SITE.leaderboard;
+    if (!lb || !lb.data) return;
+
+    const updatedEl = document.getElementById("lbUpdated");
+    if (updatedEl) updatedEl.textContent = (t("lb.updated") || "Updated:") + " " + lb.updatedAt;
+
+    const data = [...lb.data].sort((a, b) => {
+      if (sortKey === "runs")    return b.runs - a.runs;
+      if (sortKey === "pace") {
+        const toSec = (p) => { const [m,s] = p.split(":").map(Number); return m * 60 + s; };
+        return toSec(a.pace) - toSec(b.pace); // lower pace = faster = better
+      }
+      return b.km - a.km; // default: distance
+    });
+
+    const medal = ["🥇","🥈","🥉"];
+    const tbody = document.getElementById("lbBody");
+    if (!tbody) return;
+
+    tbody.innerHTML = data.map((m, i) => {
+      const rank = i + 1;
+      const isTop = rank <= 3;
+      return `<tr>
+        <td class="lb-rank${isTop ? " top" : ""}">${medal[i] || rank}</td>
+        <td class="lb-name">${esc(m.name)}</td>
+        <td class="lb-val${sortKey === "km" || !sortKey ? " highlight" : ""}">${m.km} km</td>
+        <td class="lb-val${sortKey === "runs" ? " highlight" : ""}">${m.runs}</td>
+        <td class="lb-val">${m.longest} km</td>
+        <td class="lb-val${sortKey === "pace" ? " highlight" : ""}">${esc(m.pace)} /km</td>
+        <td class="lb-val${m.elev ? "" : " lb-muted"}">${m.elev ? m.elev + " m" : "--"}</td>
+      </tr>`;
+    }).join("");
+
+    // Sort buttons
+    document.querySelectorAll(".lb-sort").forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.sort === (sortKey || "km"));
+      btn.onclick = () => renderLeaderboard(btn.dataset.sort);
+    });
+  }
+
   /* ---------- ABOUT: Member Floating Bubbles ---------- */
   function renderMemberBubbles() {
     const stage = $("#memberBubbleStage");
@@ -364,6 +406,7 @@
   /* ---------- Mulai ---------- */
   $("#year").textContent = new Date().getFullYear();
   buildHero();
+  renderLeaderboard();
   renderMemberBubbles();
   renderFooterSocials();
   renderSocials();
