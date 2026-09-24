@@ -298,7 +298,10 @@
     if (!lb || !lb.data) return;
 
     const updatedEl = document.getElementById("lbUpdated");
-    if (updatedEl) updatedEl.textContent = (t("lb.updated") || "Updated:") + " " + lb.updatedAt;
+    if (updatedEl) {
+      const updatedStr = typeof lb.updatedAt === "object" ? (lb.updatedAt[lang] || lb.updatedAt.id) : lb.updatedAt;
+      updatedEl.textContent = (t("lb.updated") || "Updated:") + " " + updatedStr;
+    }
 
     const data = [...lb.data].sort((a, b) => {
       if (sortKey === "runs")    return b.runs - a.runs;
