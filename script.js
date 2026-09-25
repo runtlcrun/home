@@ -224,6 +224,7 @@
     updateHeroAlts();
     renderCollage();
     renderEvents();
+    renderStatsBar();
     renderLeaderboard();
   }
 
@@ -291,6 +292,18 @@
     setInterval(tick, 1000);
   }
 
+
+  /* ---------- STATS BAR ---------- */
+  function renderStatsBar() {
+    const el = document.getElementById("statsBar");
+    if (!el || !SITE.statsBar) return;
+    const items = SITE.statsBar.map((s) => {
+      const text = typeof s === "object" ? (s[lang] || s.id) : s;
+      return `<span class="stats-item">${esc(text)}</span><span class="stats-sep" aria-hidden="true">/</span>`;
+    }).join("");
+    // Duplikat untuk seamless loop
+    el.innerHTML = items + items;
+  }
 
   /* ---------- LEADERBOARD ---------- */
   function renderLeaderboard(sortKey) {
@@ -410,6 +423,7 @@
   /* ---------- Mulai ---------- */
   $("#year").textContent = new Date().getFullYear();
   buildHero();
+  renderStatsBar();
   renderLeaderboard();
   renderMemberBubbles();
   renderFooterSocials();
